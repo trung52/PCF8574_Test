@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Embedded/Espressif/frameworks/test_pcf8574/build/esp-idf/esp_system/port/cmake_install.cmake")
+  include("C:/Embedded/Espressif/frameworks/PCF8574_Test/build/esp-idf/esp_system/port/cmake_install.cmake")
 
 endif()
 

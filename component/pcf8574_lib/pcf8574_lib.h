@@ -11,6 +11,7 @@
 
 #include <stddef.h>
 #include "../i2cdev/i2cdev.h"
+#include "../esp_idf_lib_helpers/esp_idf_lib_helpers.h"
 #include <esp_err.h>
 #include "../pcf8574/pcf8574.h"
 

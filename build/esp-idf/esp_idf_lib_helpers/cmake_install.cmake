@@ -1,4 +1,4 @@
-# Install script for directory: C:/Embedded/Espressif/frameworks/test_pcf8574/component/esp_idf_lib_helpers
+# Install script for directory: C:/Embedded/Espressif/frameworks/PCF8574_Test/component/esp_idf_lib_helpers
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

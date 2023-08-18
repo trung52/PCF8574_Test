@@ -16,7 +16,6 @@ esp_err_t pcf8574_initialize(i2c_dev_t *dev, uint8_t addr, i2c_port_t port, gpio
         return error_code;
     }
     ESP_LOGI(__func__, "PCF8574 initialize successfully.");
-    pcf8574_writeAllPort(dev, (uint8_t*)0xFF);
     return error_code;
 }
 

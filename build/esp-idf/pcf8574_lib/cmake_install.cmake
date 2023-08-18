@@ -1,4 +1,4 @@
-# Install script for directory: C:/Embedded/Espressif/frameworks/test_pcf8574/component/pcf8574_lib
+# Install script for directory: C:/Embedded/Espressif/frameworks/PCF8574_Test/component/pcf8574_lib
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

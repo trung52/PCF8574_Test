@@ -5,15 +5,15 @@ cmake_minimum_required(VERSION 3.5)
 
 file(MAKE_DIRECTORY
   "C:/Embedded/Espressif/frameworks/esp-idf-v4.4.3/components/bootloader/subproject"
-  "C:/Embedded/Espressif/frameworks/test_pcf8574/build/bootloader"
-  "C:/Embedded/Espressif/frameworks/test_pcf8574/build/bootloader-prefix"
-  "C:/Embedded/Espressif/frameworks/test_pcf8574/build/bootloader-prefix/tmp"
-  "C:/Embedded/Espressif/frameworks/test_pcf8574/build/bootloader-prefix/src/bootloader-stamp"
-  "C:/Embedded/Espressif/frameworks/test_pcf8574/build/bootloader-prefix/src"
-  "C:/Embedded/Espressif/frameworks/test_pcf8574/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Embedded/Espressif/frameworks/PCF8574_Test/build/bootloader"
+  "C:/Embedded/Espressif/frameworks/PCF8574_Test/build/bootloader-prefix"
+  "C:/Embedded/Espressif/frameworks/PCF8574_Test/build/bootloader-prefix/tmp"
+  "C:/Embedded/Espressif/frameworks/PCF8574_Test/build/bootloader-prefix/src/bootloader-stamp"
+  "C:/Embedded/Espressif/frameworks/PCF8574_Test/build/bootloader-prefix/src"
+  "C:/Embedded/Espressif/frameworks/PCF8574_Test/build/bootloader-prefix/src/bootloader-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "C:/Embedded/Espressif/frameworks/test_pcf8574/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
+    file(MAKE_DIRECTORY "C:/Embedded/Espressif/frameworks/PCF8574_Test/build/bootloader-prefix/src/bootloader-stamp/${subDir}")
 endforeach()

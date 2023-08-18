@@ -1,4 +1,4 @@
-/* * Data converted from C:/Embedded/Espressif/frameworks/test_pcf8574/build/esp-idf/mbedtls/x509_crt_bundle
+/* * Data converted from C:/Embedded/Espressif/frameworks/PCF8574_Test/build/esp-idf/mbedtls/x509_crt_bundle
  */
 .data
 .section .rodata.embedded

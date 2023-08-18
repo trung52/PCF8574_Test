@@ -39,9 +39,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("C:/Embedded/Espressif/frameworks/test_pcf8574/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
-  include("C:/Embedded/Espressif/frameworks/test_pcf8574/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
-  include("C:/Embedded/Espressif/frameworks/test_pcf8574/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
+  include("C:/Embedded/Espressif/frameworks/PCF8574_Test/build/esp-idf/mbedtls/mbedtls/include/cmake_install.cmake")
+  include("C:/Embedded/Espressif/frameworks/PCF8574_Test/build/esp-idf/mbedtls/mbedtls/3rdparty/cmake_install.cmake")
+  include("C:/Embedded/Espressif/frameworks/PCF8574_Test/build/esp-idf/mbedtls/mbedtls/library/cmake_install.cmake")
 
 endif()
 
