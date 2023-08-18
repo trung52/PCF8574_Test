@@ -60,24 +60,24 @@ esp_err_t pcf8574_initialize(i2c_dev_t *dev, uint8_t addr, i2c_port_t port, gpio
 esp_err_t pcf8574_deInitialize(i2c_dev_t *dev);
 
 /**
- * @brief Write to all port (P0->P7)
+ * @brief Write to all pin (P0->P7)
  * 
  * @param[in] dev I2C device descriptor
  * 
  * @param[in] val 8-bit GPIO port value
 */
-esp_err_t pcf8574_writeAllPort(i2c_dev_t *dev, uint8_t *val);
+esp_err_t pcf8574_writeAllPin(i2c_dev_t *dev, uint8_t *val);
 
 /**
- * @brief Write to only 1 port that assigned
+ * @brief Write to only 1 pin that assigned
  * 
  * @param[in] dev I2C device descriptor
  * 
  * @param[in] val 8-bit GPIO port value
  * 
- * @param[in] port any port that you want to write (change logic) (value in [0,7])
+ * @param[in] pin any pin that you want to write (change logic) (value in [0,7])
  * 
- * @param[in] level port's logic level that you want to set
+ * @param[in] level pin's logic level that you want to set
 */
 esp_err_t pcf8574_writePort(i2c_dev_t *dev, uint8_t *val, uint8_t port, bool level);
 #endif

@@ -23,20 +23,23 @@ esp_err_t pcf8574_deInitialize(i2c_dev_t *dev){
     return pcf8574_free_desc(dev);
 }
 
-esp_err_t pcf8574_writeAllPort(i2c_dev_t *dev, uint8_t *val){
+esp_err_t pcf8574_writeAllPin(i2c_dev_t *dev, uint8_t *val){
     return pcf8574_port_write(dev, *val);
 }
 
-esp_err_t pcf8574_writePort(i2c_dev_t *dev, uint8_t *val, uint8_t port, bool level){
+esp_err_t pcf8574_writePin(i2c_dev_t *dev, uint8_t *val, uint8_t pin, bool level){
+    if(pin > 7)
+        return ESP_ERR_INVALID_ARG;
+    
     if(level == HIGH_LEVEL){
-        *val = ((*val) | (1<<port));
-        pcf8574_writeAllPort(dev, val);
+        *val = ((*val) | (1<<pin));
+        pcf8574_writeAllPin(dev, val);
     }
     else{
-        uint8_t _val = (PCF8574_LOG_NO_ERROR ^ (1<<port)); 
-        /*Khong dung truc tiep XOR de tranh truong hop port o san trang thai LOW, khi XOR voi 1 se thanh HIGH*/
+        uint8_t _val = (PCF8574_LOG_NO_ERROR ^ (1<<pin)); 
+        /*Khong dung truc tiep XOR de tranh truong hop pin o san trang thai LOW, khi XOR voi 1 se thanh HIGH*/
         *val = ((*val) & _val); 
-        pcf8574_writeAllPort(dev, val);
+        pcf8574_writeAllPin(dev, val);
     }
     return ESP_OK;
 }
