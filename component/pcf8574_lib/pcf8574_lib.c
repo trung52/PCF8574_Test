@@ -37,7 +37,6 @@ esp_err_t pcf8574_writePin(i2c_dev_t *dev, uint8_t *val, uint8_t pin, bool level
     }
     else{
         uint8_t _val = (PCF8574_LOG_NO_ERROR ^ (1<<pin)); 
-        /*Khong dung truc tiep XOR de tranh truong hop pin o san trang thai LOW, khi XOR voi 1 se thanh HIGH*/
         *val = ((*val) & _val); 
         pcf8574_writeAllPin(dev, val);
     }
