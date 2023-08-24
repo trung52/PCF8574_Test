@@ -13,16 +13,16 @@ void app_main(void)
                                                               CONFIG_PCF8574_I2C_PORT,
                                                               CONFIG_PCF8574_PIN_NUM_SDA,
                                                               CONFIG_PCF8574_PIN_NUM_SCL));
-    pcf7574_io_val = 0xAA;
-    pcf8574_writeAllPin(&pcf8574, &pcf7574_io_val);
-    // while (1)
-    // {
-    //     pcf7574_io_val = 0xAA;
-    //     ESP_ERROR_CHECK_WITHOUT_ABORT(pcf8574_writeAllPort(&pcf8574, &pcf7574_io_val));
-    //     vTaskDelay(1000);
-    //     pcf7574_io_val = 0x55;
-    //     ESP_ERROR_CHECK_WITHOUT_ABORT(pcf8574_writeAllPort(&pcf8574, &pcf7574_io_val));
-    //     vTaskDelay(1000);
-    // }
+    // pcf7574_io_val = 0xAA;
+    // pcf8574_writeAllPin(&pcf8574, &pcf7574_io_val);
+    while (1)
+    {
+        pcf7574_io_val = 0xAA;
+        ESP_ERROR_CHECK_WITHOUT_ABORT(pcf8574_writeAllPort(&pcf8574, &pcf7574_io_val));
+        vTaskDelay(1000);
+        pcf7574_io_val = 0x55;
+        ESP_ERROR_CHECK_WITHOUT_ABORT(pcf8574_writeAllPort(&pcf8574, &pcf7574_io_val));
+        vTaskDelay(1000);
+    }
     
 }
