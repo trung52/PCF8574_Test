@@ -15,15 +15,15 @@
 #include <esp_err.h>
 #include "../pcf8574/pcf8574.h"
 
-/*
-P0 ----> Wifi Error
-P1 ----> SD card Error
-P2 ----> SPI Error
-P3 ----> UART0 Error
-P4 ----> UART2/RS485 Error
-P5 ----> I2C_1 Error
-P6 ----> I2C_2 Error
-P7 ----> PWM/IO Error
+/* mapping leds to PCF8574
+P0 ----> L15 ----> Wifi Error
+P1 ----> L16 ----> SD card Error
+P2 ----> L17 ----> SPI Error
+P3 ----> L18 ----> UART0 Error
+P4 ----> L11 ----> UART2/RS485 Error
+P5 ----> L12 ----> I2C_1 Error
+P6 ----> L13 ----> I2C_2 Error
+P7 ----> L14 ----> PWM/IO Error
 */
 
 #define PCF8574_LOG_NO_ERROR  0xFF          //1111 1111
